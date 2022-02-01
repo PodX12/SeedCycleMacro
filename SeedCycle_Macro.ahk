@@ -1,12 +1,9 @@
-;;Script created by PodX12 py by Specnr
-
+;;Script created by PodX12
 
 #SingleInstance, Force
 SetWorkingDir, %A_ScriptDir%
 SetKeyDelay, 100
 
-global next_seed = ""
-global token = ""
 global timestamp = 0
 
 ; Update this to the saves directory of your minecraft instance
