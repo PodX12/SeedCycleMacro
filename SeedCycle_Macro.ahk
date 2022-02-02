@@ -28,7 +28,7 @@ IfNotExist, OldWorldDirectory
     FileCreateDir, OldWorldDirectory
 
 CreateWorld(){
-    Loop, Files, %SavesDirectory%*, D
+    Loop, Files, %OldWorldDirectory%*, D
     {
         _Check :=SubStr(A_LoopFileName,1,1)
         If (_Check!="_")
