@@ -24,8 +24,8 @@ IfNotExist, %SavesDirectory%
     ExitApp
 }
 
-IfNotExist, OldWorldDirectory
-    FileCreateDir, OldWorldDirectory
+IfNotExist, %OldWorldDirectory%
+    FileCreateDir, %OldWorldDirectory%
 
 CreateWorld(){
     Loop, Files, %SavesDirectory%*, D
@@ -33,7 +33,7 @@ CreateWorld(){
         _Check :=SubStr(A_LoopFileName,1,1)
         If (_Check!="_")
         {
-            FileMoveDir, %SavesDirectory%%A_LoopFileName%, OldWorldDirectory\%A_LoopFileName%%A_NowUTC%, R
+            FileMoveDir, %SavesDirectory%%A_LoopFileName%, %OldWorldDirectory%\%A_LoopFileName%%A_NowUTC%, R
         }
     }
     delay := 45 ; Fine tune for your PC/comfort level (Each screen needs to be visible for at least a frame)
